@@ -1,0 +1,136 @@
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes float3 {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0px);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    position: relative;
+    background: linear-gradient(to bottom, #c896e8, #a876d8);
+    width: 100vw;
+    height: 600px;
+     overflow: hidden;
+}
+
+.string-wrapper{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.circle1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -100px;
+    animation: 0s;
+}
+
+.circle2 {
+    width: 150px;
+    height: 150px;
+    top: -30px;
+    left: 250px;
+    animation-delay: 0.5s;
+}
+
+.circle3 {
+    width: 200px;
+    height: 200px;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: float3 6s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.circle4 {
+    width: 180px;
+    height: 180px;
+    top: -40px;
+    right: 250px;
+    animation-delay: 1.5s;
+}
+
+.circle5 {
+    width: 250px;
+    height: 250px;
+    bottom: -125px;
+    left: 150px;
+    animation-delay: 2s;
+}
+
+.circle6 {
+    width: 300px;
+    height: 300px;
+    bottom: 100px;
+    right: 200px;
+    animation-delay: 2.5s;
+}
+
+.circle7 {
+    width: 350px;
+    height: 350px;
+    bottom: -175px;
+    right: -100px;
+    animation-delay: 3s;
+}
+
+.string {
+    width: 3px;
+    height: 150px;
+    background: black;
+}
+
+.star {
+    width: 45px;
+    height: 45px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background: white;
+}
+
+.string1 {
+    left: 120px;
+}
+
+.string2 {
+    left: 45%;
+}
+
+.string3 {
+    right: 35%;
+}
+
+.string4 {
+    right: 120px;
+}
