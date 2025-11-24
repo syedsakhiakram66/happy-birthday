@@ -75,7 +75,7 @@
 
 .hero {
     position: relative;
-    background: #9F5DAD; /* Base color */
+    background: #9F5DAD; 
     width: 100vw;
     height: 600px;
     overflow: hidden;
@@ -86,7 +86,7 @@
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    mix-blend-mode: screen; /* Changed from multiply for neon effect */
+    mix-blend-mode: screen; 
     opacity: 0.6;
     box-shadow: 
         0 0 60px rgba(159, 93, 173, 0.8),
@@ -218,7 +218,7 @@ animation: float 6s ease-in-out infinite;
 
 .gift-button {
     position: absolute;
-    bottom: -60%; /* Adjust this to position it where you want */
+    bottom: -60%; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -230,7 +230,7 @@ animation: float 6s ease-in-out infinite;
 }
 
 .gift-button img {
-    width: 100px; /* Adjust size */
+    width: 100px; 
     height: auto;
     display: block;
 }
