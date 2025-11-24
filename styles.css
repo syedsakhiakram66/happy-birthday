@@ -141,3 +141,47 @@
     right: 80px;
     animation-delay: 1.5s;
 }
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.happy {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    -webkit-text-stroke: 3px #2a2a2a;
+    margin: 0;
+}
+
+.birthday {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 120px;
+    color: white;
+    -webkit-text-stroke: 4px #2a2a2a;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.birthday span {
+ display: flex;
+   padding: 0px;
+animation: float 6s ease-in-out infinite;
+}
+
+.birthday .up {
+    transform: translateY(-5px);
+    animation-delay: 1.5s;
+}
+
+.birthday .down {
+    transform: translateY(5px); 
+    animation-delay: 0s;
+}
