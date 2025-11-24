@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&family=Luckiest+Guy&display=swap');
 @keyframes float {
     0%, 100% {
         transform: translateY(0px);
@@ -152,7 +153,7 @@
 }
 
 .happy {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Luckiest Guy', sans-serif;
     font-size: 40px;
     font-weight: 700;
     color: white;
@@ -161,7 +162,7 @@
 }
 
 .birthday {
-    font-family: 'Fredoka One', sans-serif;
+    font-family: 'Luckiest Guy', sans-serif;
     font-size: 120px;
     color: white;
     -webkit-text-stroke: 4px #2a2a2a;
@@ -184,4 +185,31 @@ animation: float 6s ease-in-out infinite;
 .birthday .down {
     transform: translateY(5px); 
     animation-delay: 0s;
+}
+
+.gift-button {
+    position: absolute;
+    bottom: -60%; /* Adjust this to position it where you want */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out;
+    padding: 0;
+}
+
+.gift-button img {
+    width: 100px; /* Adjust size */
+    height: auto;
+    display: block;
+}
+
+.gift-button:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.gift-button:active {
+    transform: translateX(-50%) scale(0.95);
 }
