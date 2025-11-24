@@ -16,6 +16,17 @@
     }
 }
 
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    75% {
+        transform: rotate(-3deg);
+    }
+}
 
 
 * {
@@ -106,21 +117,27 @@
     height: 360px;
     position: absolute;
     top: 0;
+    transform-origin: top center;
+    animation: swing 4s normal infinite;
 }
 
 
 .hanging-star1 {
     left: 80px;
+    animation-delay: 0s;
 }
 
 .hanging-star2 {
     left: 180px;
+    animation-delay: 0.5s;
 }
 
 .hanging-star3 {
     right: 180px;
+    animation-delay: 1s;
 }
 
 .hanging-star4 {
     right: 80px;
+    animation-delay: 1.5s;
 }
