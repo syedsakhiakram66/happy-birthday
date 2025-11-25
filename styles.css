@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fruktur:ital@0;1&family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vibur&display=swap');
 @keyframes flicker {
   0%, 18%, 22%, 25%, 53%, 57%, 100% {
      text-shadow:
@@ -74,7 +74,7 @@
 
 .hero {
     position: relative;
-    background: #9F5DAD; 
+    background: #9F5DAD;  /*linear-gradient(120deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb) */
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -219,15 +219,15 @@
 
 
 .happy {
-    font-family: 'Luckiest Guy', sans-serif;
-    font-size: 60px;
+    font-family: "Vibur", cursive;
+    font-size: 80px;
     margin: 0;
     animation: flicker 1s ease-in-out infinite;
 }
 
 .birthday {
-    font-family: 'Luckiest Guy', sans-serif;
-    font-size: 120px;
+    font-family: "Vibur", cursive;
+    font-size: 160px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -252,7 +252,7 @@
 
 .gift-button {
     position: absolute;
-    bottom: -60%; 
+    bottom: -40%; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
