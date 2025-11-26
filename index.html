@@ -177,30 +177,77 @@
         <span class="close">&times;</span>
           <div class="card-container">
         <div class="card">
-            <div class="card-inner">
+            <div class="card-inner" id="cardInner">
+           
             </div>
+             <button id="nextPageBtn" class="next-btn">➤</button>
     </div>
 </div>
 
 </div>
     <script>
+
 const modal = document.getElementById('giftModal');
 const btn = document.getElementById('giftBtn');
 const closeBtn = document.querySelector('.close');
+const nextBtn = document.getElementById('nextPageBtn');
 
-btn.onclick = function() {
-    modal.style.display = 'block';
+var speed = 50;
+
+// Split text into two pages
+var pages = [
+  "Happy Birthday! I hope your special day is filled with joy, laughter, and moments that remind you how truly appreciated you are. Today is all about celebrating the wonderful person you are and the positive impact you make on everyone around you. May this year bring you new adventures, meaningful connections, and countless reasons to smile. I hope you take time to relax, enjoy yourself, and feel surrounded by love. You deserve every bit of happiness that comes your way.",
+  "Wishing you good health, success, and unforgettable memories in the year ahead. Have an amazing birthday!"
+];
+
+let currentPage = 0;
+let i = 0;
+
+function typeWriter() {
+  let txt = pages[currentPage];
+
+  if (i < txt.length) {
+    document.getElementById("cardInner").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  } else {
+    // When finished typing, show next arrow (if more pages exist)
+    if (currentPage < pages.length - 1) {
+      nextBtn.style.display = "block";
+    }
+  }
 }
 
+btn.onclick = function() {
+  modal.style.display = 'block';
+  currentPage = 0;
+  i = 0;
+  document.getElementById("cardInner").innerHTML = "";
+  typeWriter();
+}
+
+nextBtn.onclick = function() {
+  nextBtn.style.display = "none";
+  currentPage++;
+  i = 0;
+  document.getElementById("cardInner").innerHTML = "";
+  typeWriter();
+};
+
 closeBtn.onclick = function() {
-    modal.style.display = 'none';
+  modal.style.display = 'none';
+  nextBtn.style.display = "none";
+  document.getElementById("cardInner").innerHTML = "";
 }
 
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
-    }
+  if (event.target == modal) {
+    modal.style.display = 'none';
+    nextBtn.style.display = "none";
+    document.getElementById("cardInner").innerHTML = "";
+  }
 }
+
 </script>
   </body>
 </html>
