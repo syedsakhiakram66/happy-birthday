@@ -227,6 +227,7 @@
  font-family: cursive;
   width: calc(100% - 30px);
   height: calc(100% - 30px);
+  font-size: 12px;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
